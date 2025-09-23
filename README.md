@@ -11,3 +11,5 @@ This repository contains a replication of the employability results from “Dial
 * `MP_OUTPUT_FILES`: To be adjusted at a later date.
 * `AAE_SAE_linear_regression.py`: Python file for data analysis
 * `data_analysis_result.csv`: Output of linear regression (Table S5 from Hoffman et al)
+* `figure_e2_generation.py`: Python file to generate figure E2 from paper
+* `figure_e2.png`: Output file from figure E2 generation. 

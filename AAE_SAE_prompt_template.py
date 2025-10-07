@@ -11,13 +11,13 @@ def make_data(filename: str) -> list:
   data.append(data_row)
   #data_row = []
   for i, row in df.iterrows():
-    sae_sentence = row[0]
-    aae_sentence = row[1]
+    sae_sentence = row['SAE']
+    aae_sentence = row['AAVE']
     #if sae_sentence:
-    data_row = [row + i, row, "SAE", "expected", sae_sentence]
+    data_row = [i, row, "SAE", "expected", sae_sentence]
     data.append(data_row)
     #else:
-    data_row = [row + i, row, "AAE", "unexpected", aae_sentence]
+    data_row = [i + 1, row, "AAE", "unexpected", aae_sentence]
     data.append(data_row)
   return data
 
@@ -30,3 +30,6 @@ def main():
   filename = 'sae_aave_samples-checkpoint.csv'
   data = make_data(filename)
   write_csv(data)
+
+if __name__ == '__main__':
+    main()

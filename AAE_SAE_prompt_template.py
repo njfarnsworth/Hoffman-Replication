@@ -7,22 +7,18 @@ def make_data(filename: str) -> list:
   #   for row in reader:
   df = pd.read_csv(filename)
   data = []
-  data_row = ['sentid', 'pairid', 'type', 'comparison']
+  data_row = ['sentid', 'pairid', 'type', 'comparison', 'sentence']
   data.append(data_row)
-  data_row = []
-  for row in df.iloc[i]:
-    for sentint in row:
-      if sentint == 0:
-        sentid = row
-        type = "SAE"
-        comparison = "expected"
-      else:
-        sentid = row + 1
-        type = "AAE"
-        comparison = "unexpected"
-      pairid = row
-      data_row = [sentid, pairid, type, comparison]
-      data.append(data_row)
+  #data_row = []
+  for i, row in df.iterrows():
+    sae_sentence = row[0]
+    aae_sentence = row[1]
+    #if sae_sentence:
+    data_row = [row + i, row, "SAE", "expected", sae_sentence]
+    data.append(data_row)
+    #else:
+    data_row = [row + i, row, "AAE", "unexpected", aae_sentence]
+    data.append(data_row)
   return data
 
 def write_csv(data: list):

@@ -6,7 +6,9 @@ mode:
 models:
   hf_causal_model:
     - openai-community/gpt2
+    - openai-community/gpt2-large
     - FacebookAI/roberta-base
+    - FacebookAI/roberta-large
 predfpath: predictions/agreement.tsv
 datafpath: AAE_SAE_MP.csv
 resultsfpath: results/hoffmanagreement.tsv

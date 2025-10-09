@@ -1,0 +1,13 @@
+exp: Minimal Pair
+
+mode:
+  - evaluate
+  - analyze
+models:
+  hf_masked_model:
+    - FacebookAI/roberta-base
+predfpath: predictions/agreement.tsv
+datafpath: AAE_SAE_MP.csv
+resultsfpath: results/hoffmanagreement.tsv
+
+save: by_word, by_pair, by_cond

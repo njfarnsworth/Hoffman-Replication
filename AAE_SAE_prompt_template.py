@@ -48,7 +48,7 @@ def write_csv(data: list):
     writer.writerows(data)
 
 def main():
-  filename = 'sae_aave_samples-checkpoint.csv'
+  filename = 'sae_aave_samples.csv'
   data = make_data(filename)
   write_csv(data)
 

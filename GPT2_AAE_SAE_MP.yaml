@@ -6,8 +6,8 @@ mode:
 models:
   hf_causal_model:
     - openai-community/gpt2
-predfpath: predictions/agreement.tsv
-datafpath: AAE_SAE_MP.csv
-resultsfpath: results/hoffmanagreement.tsv
+predfpath: ../midterm/predictions/GPT2_agreement.tsv
+datafpath: ../midterm/AAE_SAE_MP.tsv
+resultsfpath: ../midterm/results/GPT2_hoffmanagreement.tsv
 
 save: by_word, by_pair, by_cond

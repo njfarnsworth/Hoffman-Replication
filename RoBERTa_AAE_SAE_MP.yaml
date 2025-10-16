@@ -6,8 +6,8 @@ mode:
 models:
   hf_masked_model:
     - FacebookAI/roberta-base
-predfpath: predictions/robertaagreement.tsv
-datafpath: AAE_SAE_MP.csv
-resultsfpath: results/robertahoffmanagreement.tsv
+predfpath: ../midterm/predictions/roberta_agreement.tsv
+datafpath: ../midterm/AAE_SAE_MP.tsv
+resultsfpath: ../midterm/results/roberta_hoffmanagreement.tsv
 
 save: by_word, by_pair, by_cond

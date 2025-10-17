@@ -37,7 +37,7 @@ def make_dict(pair_filename: str, word_filename:str) -> dict:
 
         r += 2
 
-        return data
+    return data
 
 def main():
     pair_filename = 'GPT2_hoffmanagreement_bypair.tsv'
